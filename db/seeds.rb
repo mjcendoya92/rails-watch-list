@@ -5,6 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+List.destroy_all
+list_names = ["Comedy", "Drama", "Action", "Horror"]
+list_names.each do |list_name|
+  List.create!(name: list_name)
+end
+
 Movie.destroy_all
 url = "http://tmdb.lewagon.com/movie/top_rated"
 response = URI.open(url).read

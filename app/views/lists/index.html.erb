@@ -1,5 +1,6 @@
-
-
-<%= @lists.each do |list| %>
+<% @lists.each do |list| %>
   <%= list.name %>
 <% end %>
+<div>
+  <%= link_to "Create New Movie List", new_list_path %>
+</div>
